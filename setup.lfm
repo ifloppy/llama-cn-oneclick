@@ -1,18 +1,18 @@
 object FormSetup: TFormSetup
   Left = 377
-  Height = 240
+  Height = 208
   Top = 131
   Width = 610
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = '配置LLaMa与模型'
-  ClientHeight = 240
+  ClientHeight = 208
   ClientWidth = 610
   LCLVersion = '3.99.0.0'
   OnClose = FormClose
   OnCreate = FormCreate
   object btnInstallModel: TButton
-    Left = 526
+    Left = 398
     Height = 25
     Top = 128
     Width = 75
@@ -21,7 +21,7 @@ object FormSetup: TFormSetup
     OnClick = btnInstallModelClick
   end
   object btnSaveLLAMAProfile: TButton
-    Left = 160
+    Left = 7
     Height = 25
     Top = 128
     Width = 75
@@ -103,13 +103,30 @@ object FormSetup: TFormSetup
     end
   end
   object btnInstallLLAMA: TButton
-    Left = 237
+    Left = 84
     Height = 25
     Top = 128
     Width = 75
     Caption = '安装llama'
     TabOrder = 4
     OnClick = btnInstallLLAMAClick
+  end
+  object btnLaunch: TButton
+    Left = 448
+    Height = 41
+    Top = 160
+    Width = 153
+    Caption = '下一步，启动'
+    TabOrder = 5
+  end
+  object btnSaveModelProfile: TButton
+    Left = 320
+    Height = 25
+    Top = 128
+    Width = 75
+    Caption = '保存选项'
+    TabOrder = 6
+    OnClick = btnSaveModelProfileClick
   end
   object SaveScriptFile: TSaveDialog
     Title = '将一键下载安装脚本保存为'

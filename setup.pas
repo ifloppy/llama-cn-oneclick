@@ -18,6 +18,8 @@ type
     btnInstallLLAMA: TButton;
     btnSaveLLAMAProfile: TButton;
     btnAutoLLAMAVersion: TButton;
+    btnSaveModelProfile: TButton;
+    btnLaunch: TButton;
     inputModel: TComboBox;
     GroupBox1: TGroupBox;
     GroupBox2: TGroupBox;
@@ -29,6 +31,7 @@ type
     procedure btnInstallLLAMAClick(Sender: TObject);
     procedure btnInstallModelClick(Sender: TObject);
     procedure btnSaveLLAMAProfileClick(Sender: TObject);
+    procedure btnSaveModelProfileClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure inputImplementationChange(Sender: TObject);
@@ -126,6 +129,10 @@ var
   outputfile: TFileStream;
   Unzipper: TUnZipper;
 begin
+  if (inputVersion.Caption = '') or (inputImplementation = PleaseSelectImpl) then begin
+    ShowMessage('请填写正确的参数');
+    exit;
+  end;
   client:=TFPHTTPClient.Create(nil);
   client.AddHeader('User-Agent', UserAgent);
   client.AllowRedirect:=true;
@@ -158,8 +165,21 @@ end;
 
 procedure TFormSetup.btnSaveLLAMAProfileClick(Sender: TObject);
 begin
+  if (inputVersion.Caption = '') or (inputImplementation = PleaseSelectImpl) then begin
+    ShowMessage('请填写正确的参数');
+    exit;
+  end;
   config.WriteString('llama', 'version',inputVersion.Caption);
   config.WriteString('llama', 'implementation', inputImplementation.Caption);
+end;
+
+procedure TFormSetup.btnSaveModelProfileClick(Sender: TObject);
+begin
+  if (inputModel.Caption = PleaseSelectModel) then begin
+    ShowMessage('请填写正确的参数');
+    exit;
+  end;
+  config.WriteString('model', 'name', inputModel.Caption);
 end;
 
 procedure TFormSetup.FormClose(Sender: TObject; var CloseAction: TCloseAction);
@@ -169,7 +189,7 @@ end;
 
 procedure TFormSetup.inputImplementationChange(Sender: TObject);
 begin
-
+  if inputImplementation.Caption='avx512' then ShowMessage('注意:许多机器上无法使用AVX512指令集，若在不支持AVX512的机型上选择了该选项，则会出现llama无法启动的情况。如果你不确定自己在做什么，请点击“自动填写”');
 end;
 
 end.
