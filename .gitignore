@@ -1,5 +1,7 @@
 /backup
 /lib
+/llama
+/models
 *.res
 *.exe
 *.ini
