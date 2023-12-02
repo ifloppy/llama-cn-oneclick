@@ -111,4 +111,11 @@ object FormSetup: TFormSetup
     TabOrder = 4
     OnClick = btnInstallLLAMAClick
   end
+  object SaveScriptFile: TSaveDialog
+    Title = '将一键下载安装脚本保存为'
+    FileName = 'inst.bat'
+    Filter = '批处理文件|*.bat'
+    Left = 336
+    Top = 80
+  end
 end

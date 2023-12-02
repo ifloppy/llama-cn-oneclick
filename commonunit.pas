@@ -14,6 +14,7 @@ const
 
 
 procedure LoadConfig();
+function isEmptyDirectory(aDir:string):boolean;
 
 var
    config: TIniFile;
@@ -26,6 +27,18 @@ procedure LoadConfig();
 begin
   config:=TIniFile.Create('config.ini');
 
+end;
+
+function isEmptyDirectory(aDir:string):boolean;
+var
+  SearchRecResult: TSearchRec;
+begin
+  Result := FindFirst(IncludeTrailingPathDelimiter(aDir) + '*', faAnyFile, SearchRecResult)<>0;
+
+  while (SearchRecResult.Name = '.') or (SearchRecResult.Name = '..') do
+    Result := FindNext(SearchRecResult) <> 0;;
+
+  FindClose(SearchRecResult);
 end;
 
 end.

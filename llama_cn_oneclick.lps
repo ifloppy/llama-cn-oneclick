@@ -8,9 +8,9 @@
       <Unit>
         <Filename Value="llama_cn_oneclick.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="2"/>
         <CursorPos X="71" Y="10"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="25"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -20,18 +20,19 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="128"/>
-        <CursorPos X="17" Y="158"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="134"/>
+        <CursorPos X="11" Y="151"/>
+        <UsageCount Value="25"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="commonunit.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
-        <CursorPos X="4" Y="20"/>
-        <UsageCount Value="20"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="2"/>
+        <CursorPos X="53" Y="17"/>
+        <UsageCount Value="25"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -40,7 +41,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="92"/>
         <CursorPos X="10" Y="112"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\fpcupdeluxe\fpcsrc\packages\paszlib\src\ziputils.pas"/>
@@ -48,65 +49,61 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="39"/>
         <CursorPos X="3" Y="59"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\fpcupdeluxe\fpcsrc\rtl\objpas\sysutils\filutilh.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="229"/>
         <CursorPos X="10" Y="249"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\fpcupdeluxe\fpcsrc\packages\fcl-process\src\processbody.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="662"/>
         <CursorPos X="3" Y="668"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\fpcupdeluxe\lazarus\lcl\include\messagedialogs.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="155"/>
         <CursorPos X="6" Y="174"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\fpcupdeluxe\fpcsrc\packages\fcl-stl\src\ghashmap.pp"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="54"/>
         <CursorPos X="22" Y="74"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\fpcupdeluxe\fpcsrc\rtl\inc\objpash.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="226"/>
         <CursorPos X="26" Y="244"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\fpcupdeluxe\lazarus\components\lazutils\fileutil.pas"/>
+        <UnitName Value="FileUtil"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="38"/>
+        <CursorPos X="10" Y="58"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\fpcupdeluxe\lazarus\components\lazutils\fileutil.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="100"/>
+        <CursorPos X="45" Y="104"/>
         <UsageCount Value="10"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="setup.pas"/>
-        <Caret Line="51" Column="17" TopLine="40"/>
-      </Position>
-      <Position>
-        <Filename Value="setup.pas"/>
-        <Caret Line="104" Column="23" TopLine="73"/>
-      </Position>
-      <Position>
-        <Filename Value="setup.pas"/>
-        <Caret Line="90" Column="26" TopLine="70"/>
-      </Position>
-      <Position>
-        <Filename Value="setup.pas"/>
-        <Caret Line="68" Column="3" TopLine="62"/>
-      </Position>
-      <Position>
-        <Filename Value="setup.pas"/>
-        <Caret Line="99" Column="24" TopLine="77"/>
-      </Position>
       <Position>
         <Filename Value="setup.pas"/>
         <Caret Line="94" Column="59" TopLine="86"/>
@@ -206,6 +203,26 @@
       <Position>
         <Filename Value="setup.pas"/>
         <Caret Line="84" Column="71" TopLine="46"/>
+      </Position>
+      <Position>
+        <Filename Value="setup.pas"/>
+        <Caret Line="132" Column="81" TopLine="129"/>
+      </Position>
+      <Position>
+        <Filename Value="setup.pas"/>
+        <Caret Line="151" Column="19" TopLine="127"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\fpcupdeluxe\lazarus\components\lazutils\fileutil.pas"/>
+        <Caret Line="58" Column="10" TopLine="38"/>
+      </Position>
+      <Position>
+        <Filename Value="setup.pas"/>
+        <Caret Line="155" Column="237" TopLine="135"/>
+      </Position>
+      <Position>
+        <Filename Value="setup.pas"/>
+        <Caret Line="156" Column="16" TopLine="134"/>
       </Position>
     </JumpHistory>
     <RunParams>

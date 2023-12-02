@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls, fphttpclient,
-  fpjson, jsonparser, Zipper, process, Contnrs, StrUtils;
+  fpjson, jsonparser, Zipper, process, Contnrs, StrUtils, FileUtil;
 
 type
 
@@ -23,6 +23,7 @@ type
     GroupBox2: TGroupBox;
     inputImplementation: TComboBox;
     inputVersion: TLabeledEdit;
+    SaveScriptFile: TSaveDialog;
     procedure btnAutoLLAMAImplClick(Sender: TObject);
     procedure btnAutoLLAMAVersionClick(Sender: TObject);
     procedure btnInstallLLAMAClick(Sender: TObject);
@@ -143,8 +144,16 @@ begin
 end;
 
 procedure TFormSetup.btnInstallModelClick(Sender: TObject);
+var
+  script: TStringStream;
 begin
-  ShowMessage(ModelRepo.Items[inputModel.Caption]);
+  //ShowMessage(ModelRepo.Items[inputModel.Caption]);
+  script:=TStringStream.Create('git lfs install'+LineEnding+'git clone '+ModelRepo.Items[inputModel.Caption]+' '+GetCurrentDir+PathDelim+'models'+LineEnding+'pause');
+  if SaveScriptFile.Execute then script.SaveToFile(SaveScriptFile.FileName);
+
+
+  if not isEmptyDirectory('models') then if MessageDlg('模型目录非空', '安装新的模型需要将models目录清空。点击“是”则会自动清空；“否”则由你稍后自行清空', mtConfirmation, mbYesNo, 0) = mrYes then DeleteDirectory('models', true);
+  script.Free;
 end;
 
 procedure TFormSetup.btnSaveLLAMAProfileClick(Sender: TObject);
