@@ -1,0 +1,114 @@
+object FormSetup: TFormSetup
+  Left = 377
+  Height = 240
+  Top = 131
+  Width = 610
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = '配置LLaMa与模型'
+  ClientHeight = 240
+  ClientWidth = 610
+  LCLVersion = '3.99.0.0'
+  OnClose = FormClose
+  OnCreate = FormCreate
+  object btnInstallModel: TButton
+    Left = 526
+    Height = 25
+    Top = 128
+    Width = 75
+    Caption = '安装模型'
+    TabOrder = 0
+    OnClick = btnInstallModelClick
+  end
+  object btnSaveLLAMAProfile: TButton
+    Left = 160
+    Height = 25
+    Top = 128
+    Width = 75
+    Caption = '保存选项'
+    TabOrder = 1
+    OnClick = btnSaveLLAMAProfileClick
+  end
+  object GroupBox1: TGroupBox
+    Left = 7
+    Height = 112
+    Top = 8
+    Width = 305
+    Caption = 'llama'
+    ClientHeight = 90
+    ClientWidth = 301
+    TabOrder = 2
+    object inputVersion: TLabeledEdit
+      Left = 8
+      Height = 25
+      Top = 24
+      Width = 208
+      EditLabel.Height = 17
+      EditLabel.Width = 208
+      EditLabel.Caption = 'llama.cpp版本'
+      TabOrder = 0
+    end
+    object inputImplementation: TComboBox
+      Left = 8
+      Height = 25
+      Top = 56
+      Width = 208
+      ItemHeight = 17
+      Items.Strings = (
+        'avx'
+        'avx2'
+        'avx512'
+        'openblas'
+      )
+      ReadOnly = True
+      TabOrder = 1
+      OnChange = inputImplementationChange
+    end
+    object btnAutoLLAMAVersion: TButton
+      Left = 221
+      Height = 25
+      Top = 24
+      Width = 75
+      Caption = '自动填写'
+      TabOrder = 2
+      OnClick = btnAutoLLAMAVersionClick
+    end
+    object btnAutoLLAMAImpl: TButton
+      Left = 221
+      Height = 25
+      Top = 56
+      Width = 75
+      Caption = '自动填写'
+      TabOrder = 3
+      OnClick = btnAutoLLAMAImplClick
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 320
+    Height = 112
+    Top = 8
+    Width = 281
+    Caption = '模型'
+    ClientHeight = 90
+    ClientWidth = 277
+    TabOrder = 3
+    object inputModel: TComboBox
+      Left = 8
+      Height = 25
+      Top = 8
+      Width = 260
+      ItemHeight = 17
+      ReadOnly = True
+      TabOrder = 0
+    end
+  end
+  object btnInstallLLAMA: TButton
+    Left = 237
+    Height = 25
+    Top = 128
+    Width = 75
+    Caption = '安装llama'
+    TabOrder = 4
+    OnClick = btnInstallLLAMAClick
+  end
+end

@@ -1,0 +1,2 @@
+Chinese-Alpaca-2-7B|https://huggingface.co/hfl/chinese-alpaca-2-7b-gguf
+Chinese-Alpaca-2-13B|https://huggingface.co/hfl/chinese-alpaca-2-13b-gguf
