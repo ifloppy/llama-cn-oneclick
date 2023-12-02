@@ -118,6 +118,7 @@ object FormSetup: TFormSetup
     Width = 153
     Caption = '下一步，启动'
     TabOrder = 5
+    OnClick = btnLaunchClick
   end
   object btnSaveModelProfile: TButton
     Left = 320

@@ -107,6 +107,9 @@
     </RunParams>
     <RequiredPackages>
       <Item>
+        <PackageName Value="FCL"/>
+      </Item>
+      <Item>
         <PackageName Value="LCL"/>
       </Item>
     </RequiredPackages>
@@ -125,6 +128,13 @@
       <Unit>
         <Filename Value="commonunit.pas"/>
         <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="launch.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormLaunch"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
       </Unit>
     </Units>
   </ProjectOptions>

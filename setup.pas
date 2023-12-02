@@ -30,6 +30,7 @@ type
     procedure btnAutoLLAMAVersionClick(Sender: TObject);
     procedure btnInstallLLAMAClick(Sender: TObject);
     procedure btnInstallModelClick(Sender: TObject);
+    procedure btnLaunchClick(Sender: TObject);
     procedure btnSaveLLAMAProfileClick(Sender: TObject);
     procedure btnSaveModelProfileClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
@@ -46,7 +47,7 @@ var
 
 implementation
 
-uses commonunit;
+uses commonunit, launch;
 
 {$R *.lfm}
 
@@ -129,7 +130,7 @@ var
   outputfile: TFileStream;
   Unzipper: TUnZipper;
 begin
-  if (inputVersion.Caption = '') or (inputImplementation = PleaseSelectImpl) then begin
+  if (inputVersion.Caption = '') or (inputImplementation.Text = PleaseSelectImpl) then begin
     ShowMessage('请填写正确的参数');
     exit;
   end;
@@ -163,9 +164,20 @@ begin
   script.Free;
 end;
 
+procedure TFormSetup.btnLaunchClick(Sender: TObject);
+begin
+
+  //FormLaunch:=TFormLaunch.Create(nil);
+  //FormLaunch.Show;
+
+  Application.CreateForm(TFormLaunch, FormLaunch);
+
+  Close;
+end;
+
 procedure TFormSetup.btnSaveLLAMAProfileClick(Sender: TObject);
 begin
-  if (inputVersion.Caption = '') or (inputImplementation = PleaseSelectImpl) then begin
+  if (inputVersion.Caption = '') or (inputImplementation.Text = PleaseSelectImpl) then begin
     ShowMessage('请填写正确的参数');
     exit;
   end;

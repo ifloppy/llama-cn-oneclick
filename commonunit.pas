@@ -12,6 +12,8 @@ const
   PleaseSelectModel = '选择一个模型';
   UserAgent = 'llama-cn-oneclick';
 
+  defaultPrompt = 'You are a helpful assistant. 你是一个乐于助人的助手。';
+
 
 procedure LoadConfig();
 function isEmptyDirectory(aDir:string):boolean;

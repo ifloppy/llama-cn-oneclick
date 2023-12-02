@@ -1,0 +1,134 @@
+object FormLaunch: TFormLaunch
+  Left = 377
+  Height = 329
+  Top = 131
+  Width = 501
+  Caption = '启动'
+  ClientHeight = 329
+  ClientWidth = 501
+  LCLVersion = '3.99.0.0'
+  OnClose = FormClose
+  OnCreate = FormCreate
+  object RadioGroup1: TRadioGroup
+    Left = 8
+    Height = 49
+    Top = 8
+    Width = 480
+    Anchors = [akTop, akLeft, akRight]
+    AutoFill = True
+    Caption = '人机交互模式'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclTopToBottomThenLeftToRight
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 27
+    ClientWidth = 476
+    ColumnLayout = clVerticalThenHorizontal
+    TabOrder = 0
+    object rbConsole: TRadioButton
+      Left = 6
+      Height = 27
+      Top = 0
+      Width = 220
+      Caption = '控制台模式'
+      Checked = True
+      TabOrder = 0
+      TabStop = True
+    end
+    object rbGUI: TRadioButton
+      Left = 226
+      Height = 27
+      Top = 0
+      Width = 244
+      Caption = '图形化界面模式'
+      Enabled = False
+      TabOrder = 1
+    end
+  end
+  object GroupBox1: TGroupBox
+    Left = 8
+    Height = 96
+    Top = 72
+    Width = 480
+    Anchors = [akTop, akLeft, akRight]
+    Caption = '启动时的提示词'
+    ClientHeight = 74
+    ClientWidth = 476
+    TabOrder = 1
+    object inputPrompt: TMemo
+      Left = 5
+      Height = 63
+      Top = 0
+      Width = 465
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      ScrollBars = ssAutoVertical
+      TabOrder = 0
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 8
+    Height = 65
+    Top = 176
+    Width = 479
+    Anchors = [akTop, akLeft, akRight]
+    Caption = '选择模型文件'
+    ClientHeight = 43
+    ClientWidth = 475
+    TabOrder = 2
+    object inputModelFile: TComboBox
+      Left = 5
+      Height = 25
+      Top = 8
+      Width = 465
+      Anchors = [akTop, akLeft, akRight]
+      ItemHeight = 17
+      ReadOnly = True
+      TabOrder = 0
+    end
+  end
+  object Button1: TButton
+    Left = 384
+    Height = 41
+    Top = 280
+    Width = 104
+    Caption = 'llama，启动'
+    TabOrder = 3
+    OnClick = Button1Click
+  end
+  object btnSave: TButton
+    Left = 8
+    Height = 25
+    Top = 248
+    Width = 75
+    Caption = '保存设置'
+    TabOrder = 4
+    OnClick = btnSaveClick
+  end
+  object ShowCommandline: TEdit
+    Left = 88
+    Height = 25
+    Top = 248
+    Width = 399
+    ReadOnly = True
+    TabOrder = 5
+  end
+  object Process1: TProcess
+    Active = False
+    Options = []
+    Priority = ppNormal
+    StartupOptions = []
+    ShowWindow = swoNone
+    WindowColumns = 0
+    WindowHeight = 0
+    WindowLeft = 0
+    WindowRows = 0
+    WindowTop = 0
+    WindowWidth = 0
+    FillAttribute = 0
+    Left = 24
+    Top = 280
+  end
+end
