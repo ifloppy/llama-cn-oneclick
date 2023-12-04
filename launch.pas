@@ -90,14 +90,25 @@ end;
 procedure TFormLaunch.FormCreate(Sender: TObject);
 var
   F: TSearchRec;
+  s: string;
 begin
   inputPrompt.Lines.Text:=config.ReadString('launch', 'prompt', defaultPrompt);
   inputModelFile.Text:=config.ReadString('launch', 'model', '');
 
-  if FindFirst(GetCurrentDir+'\models\*.gguf', faAnyFile, F) = 0 then begin
+  if FindFirst(GetCurrentDir+'\models\*.*', faAnyFile, F) = 0 then begin
     repeat
       with F do begin
-        inputModelFile.Items.Add(ExtractFileName(F.Name));
+        s:=ExtractFileName(F.Name);
+        case s of
+          //Without common files that are not model files
+          'README.md': Break;
+          '.gitignore': Break;
+          '.gitattributes': Break;
+          '.': Break;
+          '..': Break;
+          '.git': Break;
+        end;
+        inputModelFile.Items.Add(s);
       end;
     until FindNext(F) <> 0;
   end;
