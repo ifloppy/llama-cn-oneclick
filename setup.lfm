@@ -3,11 +3,12 @@ object FormSetup: TFormSetup
   Height = 208
   Top = 131
   Width = 610
-  BorderIcons = [biSystemMenu]
+  BorderIcons = []
   BorderStyle = bsSingle
   Caption = '配置LLaMa与模型'
   ClientHeight = 208
   ClientWidth = 610
+  ShowInTaskBar = stAlways
   LCLVersion = '3.99.0.0'
   OnClose = FormClose
   OnCreate = FormCreate
@@ -128,6 +129,15 @@ object FormSetup: TFormSetup
     Caption = '保存选项'
     TabOrder = 6
     OnClick = btnSaveModelProfileClick
+  end
+  object btnQuit: TButton
+    Left = 7
+    Height = 25
+    Top = 176
+    Width = 75
+    Caption = '退出'
+    TabOrder = 7
+    OnClick = btnQuitClick
   end
   object SaveScriptFile: TSaveDialog
     Title = '将一键下载安装脚本保存为'

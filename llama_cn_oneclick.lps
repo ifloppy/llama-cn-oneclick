@@ -20,8 +20,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="63"/>
-        <CursorPos X="99" Y="82"/>
+        <TopLine Value="185"/>
+        <CursorPos X="8" Y="190"/>
         <UsageCount Value="35"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -181,26 +181,6 @@
     <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="launch.pas"/>
-        <Caret Line="77" Column="41" TopLine="50"/>
-      </Position>
-      <Position>
-        <Filename Value="launch.pas"/>
-        <Caret Line="78" Column="41" TopLine="51"/>
-      </Position>
-      <Position>
-        <Filename Value="launch.pas"/>
-        <Caret Line="81" Column="41" TopLine="54"/>
-      </Position>
-      <Position>
-        <Filename Value="launch.pas"/>
-        <Caret Line="131" TopLine="98"/>
-      </Position>
-      <Position>
-        <Filename Value="launch.pas"/>
-        <Caret Line="129" TopLine="78"/>
-      </Position>
-      <Position>
-        <Filename Value="launch.pas"/>
         <Caret Line="130" TopLine="94"/>
       </Position>
       <Position>
@@ -298,6 +278,26 @@
       <Position>
         <Filename Value="setup.pas"/>
         <Caret Line="87" Column="103" TopLine="63"/>
+      </Position>
+      <Position>
+        <Filename Value="setup.pas"/>
+        <Caret Line="80" Column="39" TopLine="78"/>
+      </Position>
+      <Position>
+        <Filename Value="setup.pas"/>
+        <Caret Line="209" Column="3" TopLine="179"/>
+      </Position>
+      <Position>
+        <Filename Value="setup.pas"/>
+        <Caret Line="214" Column="11" TopLine="179"/>
+      </Position>
+      <Position>
+        <Filename Value="setup.pas"/>
+        <Caret Line="36" Column="73" TopLine="11"/>
+      </Position>
+      <Position>
+        <Filename Value="setup.pas"/>
+        <Caret Line="38" Column="73" TopLine="11"/>
       </Position>
     </JumpHistory>
     <RunParams>

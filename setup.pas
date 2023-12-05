@@ -20,6 +20,7 @@ type
     btnAutoLLAMAVersion: TButton;
     btnSaveModelProfile: TButton;
     btnLaunch: TButton;
+    btnQuit: TButton;
     inputModel: TComboBox;
     GroupBox1: TGroupBox;
     GroupBox2: TGroupBox;
@@ -31,6 +32,7 @@ type
     procedure btnInstallLLAMAClick(Sender: TObject);
     procedure btnInstallModelClick(Sender: TObject);
     procedure btnLaunchClick(Sender: TObject);
+    procedure btnQuitClick(Sender: TObject);
     procedure btnSaveLLAMAProfileClick(Sender: TObject);
     procedure btnSaveModelProfileClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
@@ -183,6 +185,11 @@ begin
   Close;
 end;
 
+procedure TFormSetup.btnQuitClick(Sender: TObject);
+begin
+  Halt;
+end;
+
 procedure TFormSetup.btnSaveLLAMAProfileClick(Sender: TObject);
 begin
   if (inputVersion.Caption = '') or (inputImplementation.Text = PleaseSelectImpl) then begin
@@ -205,7 +212,7 @@ end;
 procedure TFormSetup.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
   ModelRepo.Free;
-  Halt;
+
 end;
 
 procedure TFormSetup.inputImplementationChange(Sender: TObject);
