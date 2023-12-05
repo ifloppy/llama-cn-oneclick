@@ -1,11 +1,13 @@
 object FormLaunch: TFormLaunch
   Left = 377
-  Height = 329
+  Height = 282
   Top = 131
-  Width = 501
+  Width = 809
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
   Caption = '启动'
-  ClientHeight = 329
-  ClientWidth = 501
+  ClientHeight = 282
+  ClientWidth = 809
   LCLVersion = '3.99.0.0'
   OnClose = FormClose
   OnCreate = FormCreate
@@ -13,7 +15,7 @@ object FormLaunch: TFormLaunch
     Left = 8
     Height = 49
     Top = 8
-    Width = 480
+    Width = 481
     Anchors = [akTop, akLeft, akRight]
     AutoFill = True
     Caption = '人机交互模式'
@@ -25,26 +27,25 @@ object FormLaunch: TFormLaunch
     ChildSizing.Layout = cclTopToBottomThenLeftToRight
     ChildSizing.ControlsPerLine = 1
     ClientHeight = 27
-    ClientWidth = 476
+    ClientWidth = 477
     ColumnLayout = clVerticalThenHorizontal
     TabOrder = 0
     object rbConsole: TRadioButton
       Left = 6
       Height = 27
       Top = 0
-      Width = 220
+      Width = 217
       Caption = '控制台模式'
       Checked = True
       TabOrder = 0
       TabStop = True
     end
-    object rbGUI: TRadioButton
-      Left = 226
+    object rbWebServer: TRadioButton
+      Left = 223
       Height = 27
       Top = 0
-      Width = 244
-      Caption = '图形化界面模式'
-      Enabled = False
+      Width = 248
+      Caption = 'Web Server模式'
       TabOrder = 1
     end
   end
@@ -52,17 +53,17 @@ object FormLaunch: TFormLaunch
     Left = 8
     Height = 96
     Top = 72
-    Width = 480
+    Width = 481
     Anchors = [akTop, akLeft, akRight]
-    Caption = '启动时的提示词'
+    Caption = '启动时的提示词(控制台模式)'
     ClientHeight = 74
-    ClientWidth = 476
+    ClientWidth = 477
     TabOrder = 1
     object inputPrompt: TMemo
       Left = 5
       Height = 63
       Top = 0
-      Width = 465
+      Width = 466
       Anchors = [akTop, akLeft, akRight, akBottom]
       ScrollBars = ssAutoVertical
       TabOrder = 0
@@ -72,34 +73,34 @@ object FormLaunch: TFormLaunch
     Left = 8
     Height = 65
     Top = 176
-    Width = 479
+    Width = 481
     Anchors = [akTop, akLeft, akRight]
     Caption = '选择模型文件'
     ClientHeight = 43
-    ClientWidth = 475
+    ClientWidth = 477
     TabOrder = 2
     object inputModelFile: TComboBox
       Left = 5
       Height = 25
       Top = 8
-      Width = 465
+      Width = 467
       Anchors = [akTop, akLeft, akRight]
       ItemHeight = 17
       ReadOnly = True
       TabOrder = 0
     end
   end
-  object Button1: TButton
-    Left = 384
-    Height = 41
-    Top = 280
+  object btnLaunch: TButton
+    Left = 696
+    Height = 49
+    Top = 224
     Width = 104
     Caption = 'llama，启动'
     TabOrder = 3
-    OnClick = Button1Click
+    OnClick = btnLaunchClick
   end
   object btnSave: TButton
-    Left = 8
+    Left = 616
     Height = 25
     Top = 248
     Width = 75
@@ -108,12 +109,49 @@ object FormLaunch: TFormLaunch
     OnClick = btnSaveClick
   end
   object ShowCommandline: TEdit
-    Left = 88
+    Left = 8
     Height = 25
     Top = 248
-    Width = 399
+    Width = 481
     ReadOnly = True
     TabOrder = 5
+  end
+  object GroupBox3: TGroupBox
+    Left = 496
+    Height = 88
+    Top = 8
+    Width = 304
+    Caption = 'Web Server设置'
+    ClientHeight = 66
+    ClientWidth = 300
+    TabOrder = 6
+    object inputWebPort: TSpinEdit
+      Left = 200
+      Height = 25
+      Top = 2
+      Width = 96
+      MaxValue = 65535
+      MinValue = 1
+      TabOrder = 0
+      Value = 1
+    end
+    object inputWebListen: TEdit
+      Left = 8
+      Height = 25
+      Top = 2
+      Width = 184
+      TabOrder = 1
+      TextHint = '监听主机名'
+    end
+    object btnVisitWebServer: TButton
+      Left = 221
+      Height = 25
+      Top = 32
+      Width = 75
+      Caption = '访问'
+      TabOrder = 2
+      OnClick = btnVisitWebServerClick
+    end
   end
   object Process1: TProcess
     Active = False
