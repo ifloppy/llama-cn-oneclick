@@ -1,7 +1,7 @@
 object FormLaunch: TFormLaunch
-  Left = 377
+  Left = 386
   Height = 282
-  Top = 131
+  Top = 147
   Width = 809
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle

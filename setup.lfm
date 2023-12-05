@@ -4,7 +4,7 @@ object FormSetup: TFormSetup
   Top = 131
   Width = 610
   BorderIcons = [biSystemMenu]
-  BorderStyle = bsDialog
+  BorderStyle = bsSingle
   Caption = '配置LLaMa与模型'
   ClientHeight = 208
   ClientWidth = 610

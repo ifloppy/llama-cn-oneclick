@@ -9,7 +9,7 @@
         <Filename Value="llama_cn_oneclick.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="3"/>
-        <CursorPos X="11" Y="8"/>
+        <CursorPos X="26" Y="21"/>
         <UsageCount Value="35"/>
         <Loaded Value="True"/>
       </Unit>
@@ -19,8 +19,9 @@
         <ComponentName Value="FormSetup"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <TopLine Value="53"/>
-        <CursorPos X="34" Y="77"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="63"/>
+        <CursorPos X="99" Y="82"/>
         <UsageCount Value="35"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -38,7 +39,6 @@
         <ComponentName Value="FormLaunch"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <TopLine Value="72"/>
         <CursorPos X="36" Y="91"/>
@@ -138,8 +138,8 @@
       <Unit>
         <Filename Value="C:\fpcupdeluxe\fpcsrc\rtl\inc\systemh.inc"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="852"/>
-        <CursorPos X="3" Y="872"/>
+        <TopLine Value="1714"/>
+        <CursorPos X="11" Y="1734"/>
         <UsageCount Value="10"/>
       </Unit>
       <Unit>
@@ -170,44 +170,15 @@
         <CursorPos X="3" Y="126"/>
         <UsageCount Value="10"/>
       </Unit>
+      <Unit>
+        <Filename Value="C:\fpcupdeluxe\fpcsrc\rtl\win\systhrd.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="529"/>
+        <CursorPos X="8" Y="549"/>
+        <UsageCount Value="10"/>
+      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="27">
-      <Position>
-        <Filename Value="setup.pas"/>
-        <Caret Line="65" Column="69" TopLine="53"/>
-      </Position>
-      <Position>
-        <Filename Value="launch.pas"/>
-        <Caret Line="74" Column="45" TopLine="52"/>
-      </Position>
-      <Position>
-        <Filename Value="launch.pas"/>
-        <Caret Line="97" Column="42" TopLine="71"/>
-      </Position>
-      <Position>
-        <Filename Value="launch.pas"/>
-        <Caret Line="102" Column="31" TopLine="71"/>
-      </Position>
-      <Position>
-        <Filename Value="C:\fpcupdeluxe\fpcsrc\rtl\objpas\sysutils\finah.inc"/>
-        <Caret Line="28" Column="11"/>
-      </Position>
-      <Position>
-        <Filename Value="launch.pas"/>
-        <Caret Line="107" Column="35" TopLine="71"/>
-      </Position>
-      <Position>
-        <Filename Value="launch.pas"/>
-        <Caret Line="87" Column="52" TopLine="82"/>
-      </Position>
-      <Position>
-        <Filename Value="launch.pas"/>
-        <Caret Line="75" Column="41" TopLine="48"/>
-      </Position>
-      <Position>
-        <Filename Value="launch.pas"/>
-        <Caret Line="76" Column="41" TopLine="49"/>
-      </Position>
+    <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="launch.pas"/>
         <Caret Line="77" Column="41" TopLine="50"/>
@@ -283,6 +254,50 @@
       <Position>
         <Filename Value="launch.pas"/>
         <Caret Line="139" Column="3" TopLine="105"/>
+      </Position>
+      <Position>
+        <Filename Value="setup.pas"/>
+        <Caret Line="77" Column="34" TopLine="53"/>
+      </Position>
+      <Position>
+        <Filename Value="setup.pas"/>
+        <Caret Line="65" Column="30" TopLine="53"/>
+      </Position>
+      <Position>
+        <Filename Value="setup.pas"/>
+        <Caret Line="177" Column="14" TopLine="169"/>
+      </Position>
+      <Position>
+        <Filename Value="setup.pas"/>
+        <Caret Line="200" Column="24" TopLine="169"/>
+      </Position>
+      <Position>
+        <Filename Value="setup.pas"/>
+        <Caret Line="83" Column="12" TopLine="53"/>
+      </Position>
+      <Position>
+        <Filename Value="setup.pas"/>
+        <Caret Line="83" Column="12" TopLine="53"/>
+      </Position>
+      <Position>
+        <Filename Value="setup.pas"/>
+        <Caret Line="64" Column="3" TopLine="63"/>
+      </Position>
+      <Position>
+        <Filename Value="setup.pas"/>
+        <Caret Line="184" Column="41" TopLine="177"/>
+      </Position>
+      <Position>
+        <Filename Value="setup.pas"/>
+        <Caret Line="63" Column="29" TopLine="55"/>
+      </Position>
+      <Position>
+        <Filename Value="setup.pas"/>
+        <Caret Line="82" Column="13" TopLine="63"/>
+      </Position>
+      <Position>
+        <Filename Value="setup.pas"/>
+        <Caret Line="87" Column="103" TopLine="63"/>
       </Position>
     </JumpHistory>
     <RunParams>

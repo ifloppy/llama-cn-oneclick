@@ -75,7 +75,15 @@ begin
   inputModel.Text:=config.ReadString('model', 'name', PleaseSelectModel);
 
   modelLines:=TStringList.Create;
-  modelLines.LoadFromFile('models.txt');
+  try
+    modelLines.LoadFromFile('models.txt');
+  except
+    begin
+      MessageDlg('错误', '没有找到模型仓库文件，请确认你有将本程序完整地解压出来再运行！', mtError, [mbOK], 0);
+      Halt;
+    end;
+  end;
+
 
   ModelRepo:=TFPStringHashTable.Create;
   for i := 0 to Pred(modelLines.Count) do
@@ -197,6 +205,7 @@ end;
 procedure TFormSetup.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
   ModelRepo.Free;
+  Halt;
 end;
 
 procedure TFormSetup.inputImplementationChange(Sender: TObject);
